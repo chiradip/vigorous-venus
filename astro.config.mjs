@@ -7,9 +7,11 @@ import rehypeKatex from 'rehype-katex'
 
 // https://astro.build/config
 export default defineConfig({
-	/*markdown: {
+	markdown: {
 		remarkPlugins: [remarkMath],
-		rehypePlugins: [
+		rehypePlugins: [rehypeKatex]
+		},
+		/*rehypePlugins: [
 			[
 				rehypeKatex,
 				{
@@ -36,11 +38,15 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'ULSS Book',
+					label: 'Introduction',
+					autogenerate : {directory: 'intro'}
+				},
+				{
+					label: 'books',
 					autogenerate : {directory: 'pages'}
 				},
 				{
-					label: 'Algorithm - Tutorial',
+					label: 'Algorithm - Extensive Analysis',
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Introduction', slug: 'tutorial/algorithm/algorithm' },
