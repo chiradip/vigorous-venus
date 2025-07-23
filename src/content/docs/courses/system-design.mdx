@@ -1,0 +1,154 @@
+---
+title: "System Design for Scale, Failure, and Evolution"
+description: "4-Day Advanced System Design Cohort for Staff+, L8–L10 Engineers"
+---
+
+> **“You’ll of course be able to design systems like YouTube by the end of this course — but that’s not the point. Our focus is on the underlying principles: consistency, concurrency, coordination, and the realities of failure. Once you master those, designing anything becomes a matter of structured thought — not memorized patterns.”**  
+> — **Chiradip Mandal**
+
+## Overview
+
+- **Duration**: 4 Days × 2 Hours/day  
+- **Format**: 1.5h deep dive + 30m hands-on GitHub workshop  
+- **Target**: Staff+, Principal, L8–L10 engineers  
+- **Pedagogy**: Theory + application + architecture retrospectives  
+- **Deliverables**: GitHub architecture, design docs, book access  
+- **Post-Cohort**: Design circles, long-term cohort mentorship
+
+---
+
+## Learning Goals
+
+- Master architectural tradeoffs: consistency, concurrency, consensus  
+- Build systems with realistic latency, failure, resource constraints  
+- Collaboratively evolve an architecture via GitHub PRs  
+- Join a durable network of peer reviewers, technologists, and system leaders
+
+---
+
+## Day-by-Day Syllabus
+
+### Day 1 — Bounded Correctness
+**Theme**: Designing for Correctness under Latency and Failure
+
+- System boundaries, failure domains, topological constraints
+- Consistency models: strong, causal, eventual, linearizable
+- Tradeoffs: CAP, PACELC, consistency delay windows
+- **Workshop**: Design a log-backed API with defined consistency contract
+
+**Readings**:
+- Lamport — *Time, Clocks and the Ordering of Events*  
+- Jepsen — *Consistency Models Explained*
+
+---
+
+### Day 2 — Scalability Through Structure
+**Theme**: Partitioning, Replication, and Isolation
+
+- Sharding: consistent hashing, prefix-based, zone-aware
+- Replication: quorum, async vs sync, follower lag
+- Isolation levels: snapshot, serializable, write-skew
+- **Workshop**: Implement sharded write path, simulate stale read and recovery
+
+**Readings**:
+- *Spanner: Globally Distributed DB* — Google  
+- *Dynamo: Amazon's Highly Available Key-Value Store*
+
+---
+
+### Day 3 — Time, Coordination, and Recovery
+**Theme**: Consensus, Clocks, Durable Recovery
+
+- Raft, Paxos, Multi-Raft, Viewstamped Replication
+- Clocks: vector, HLC, skew compensation, leases
+- WALs, fencing tokens, log truncation, snapshotting
+- **Workshop**: Add Raft-style leadership and recovery to cohort service
+
+**Readings**:
+- Ongaro — *In Search of an Understandable Consensus Algorithm*  
+- *Viewstamped Replication Revisited*
+
+---
+
+### Day 4 — Architectural Evolution
+**Theme**: Designing for Change and Long-Term Resilience
+
+- Observability-first systems: metrics, traces, health budgets
+- Backward compatibility: dual writes, API evolution
+- Patterns: outbox, changelogs, control planes
+- **Capstone**: Extend your system — add observability, snapshot versioning, or rolling upgrades
+- **Collaboration**: Initiate a cohort-authored short paper on "System Thinking in Distributed Design" — synthesize cohort insights into a public artifact
+
+**Readings**:
+- *Eventual Consistency & The Outbox Pattern*
+
+---
+
+
+## GitHub Architecture Project
+
+This project spans all four days and simulates the evolution of a fault-tolerant distributed system through collaborative GitHub milestones. Each team will maintain:
+
+- A `design.md` document with architecture decisions, consistency contracts, and tradeoff reasoning
+- Annotated PRs referencing coordination logic, recovery strategies, and observability instrumentation
+- Structured issues reflecting real-world failure modes, SLO constraints, and coordination boundaries
+
+| Day | Milestone |
+|-----|-----------|
+| 1   | Formalize system API surface with specified consistency contracts (linearizability, causal, etc.) |
+| 2   | Apply structured sharding (range/hash) and implement write quorum coordination logic |
+| 3   | Integrate Raft-style log coordination, leader election, and recovery fencing |
+| 4   | Extend system with metrics, traces, snapshots; finalize capstone and contribute to cohort-authored paper |
+
+Each team maintains a repo with versioned design.md and issue-based planning.
+
+:::note 
+Only foundational programming proficiency is expected — the course prioritizes algorithmic thinking, systems reasoning, and correctness over language-specific implementation.
+:::
+
+---
+
+## Instructor
+
+### Chiradip Mandal
+**Writer • Distributed Systems Researcher • Founder • Senior Architect • Principal Engineer**
+
+Chiradip has led architecture at both hyperscale companies and startups. His experience includes:
+- Multi-time founder and systems advisor
+- Author of the upcoming book *Designing Ultra-Large-Scale Systems*
+- Senior Principal Engineer/Architect at Apple
+
+> _“I’m not here to teach you how to design YouTube. I’m here to help you reason about consistency, concurrency, and failure — and use that reasoning to architect things that don’t fall apart.”_
+
+---
+
+## Bonuses & Cohort Continuity
+
+- Early access to *Designing Ultra-Large-Scale Systems* (pre-release reviewer)  
+- Private Slack/Discord community for long-term mentorship  
+- Access to follow-up tracks: CRDTs, streaming architectures, infra control planes  
+- Peer design reviews + optional architecture office hours
+- Publishing high-quality research papers through SystemDesignSchool.com and its partners
+
+---
+
+## Expectations
+
+- Attend all 4 days fully; every module builds on the last  
+- Push to GitHub daily and participate in peer reviews  
+- Be prepared to defend design tradeoffs in live discussions  
+- Build not for interviews — but for systems that survive failure and time
+
+
+:::note
+Register Now
+**Pricing**: $1,250 USD per seat  
+**Includes**:
+- 8 hours of live deep-dive sessions
+- Collaborative GitHub repo & architecture reviews
+- Lifetime cohort Slack group
+- Early access to the book _Designing Ultra-Large-Scale Systems_
+
+[Click here to enroll →](https://buy.stripe.com/aFa14n7uA0i7doW6IL0Ny01)
+:::
+

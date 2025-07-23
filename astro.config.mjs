@@ -66,10 +66,26 @@ export default defineConfig({
 					label: 'System Design - Research',
 					autogenerate: { directory: 'tutorial/sysdesign' },
 				},
+				{
+					label: 'Papers',
+					autogenerate : {directory: 'papers'}
+				},
 				/*{
 					label: 'Data Structure - Reference',
 					autogenerate: { directory: 'reference' },
 				},*/
+				{
+					label: 'Courses',
+					autogenerate : {directory: 'courses'}
+				},
+				{
+					label: 'Registration',
+					autogenerate : {directory: 'registration'}
+				},
+				{
+					label: 'Contact',
+					autogenerate : {directory: 'contact'}
+				},
 			],
 		}),
 	],
