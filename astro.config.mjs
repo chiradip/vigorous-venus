@@ -42,7 +42,7 @@ export default defineConfig({
 					autogenerate : {directory: 'intro'}
 				},
 				{
-					label: 'books',
+					label: 'Books',
 					autogenerate : {directory: 'pages'}
 				},
 				{
